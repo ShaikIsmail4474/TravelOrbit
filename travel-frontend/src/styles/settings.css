@@ -1,0 +1,259 @@
+/* =================================
+   SETTINGS PAGE
+================================= */
+
+.settings-page {
+  min-height: 70vh;
+  background: #f8fafc;
+}
+
+/* HEADER */
+
+.settings-header {
+  padding: 70px 0 55px;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.settings-header h1 {
+  margin: 8px 0 10px;
+  color: #172033;
+  font-size: 38px;
+  line-height: 1.2;
+}
+
+.settings-header p {
+  max-width: 600px;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* SECTION */
+
+.settings-section {
+  padding: 55px 0 100px;
+}
+
+/* GRID */
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+/* CARD */
+
+.settings-card {
+  padding: 28px;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  background: white;
+  box-shadow:
+    0 8px 30px rgba(15, 23, 42, 0.05);
+}
+
+/* CARD HEADER */
+
+.settings-card-header {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.settings-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 11px;
+  background: #fff7ed;
+  color: #f59e0b;
+}
+
+.settings-card-header h2 {
+  margin: 0 0 4px;
+  color: #172033;
+  font-size: 18px;
+}
+
+.settings-card-header p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+/* PROFILE INFORMATION */
+
+.settings-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.settings-info-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 11px;
+  background: #f8fafc;
+}
+
+.settings-info-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 9px;
+  background: white;
+  color: #64748b;
+}
+
+.settings-info-item > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.settings-info-item small {
+  color: #94a3b8;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.settings-info-item strong {
+  overflow: hidden;
+  color: #172033;
+  font-size: 13px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* SECURITY */
+
+.settings-security-content {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.settings-security-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 17px;
+  border: 1px solid #e2e8f0;
+  border-radius: 11px;
+  background: #f8fafc;
+}
+
+.settings-security-item > div {
+  min-width: 0;
+}
+
+.settings-security-item strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #172033;
+  font-size: 13px;
+}
+
+.settings-security-item p {
+  margin: 0;
+  color: #64748b;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.settings-security-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 27px;
+  padding: 0 9px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #ecfdf5;
+  color: #15803d;
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/* NOTE */
+
+.settings-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  margin-top: 22px;
+  padding: 17px 18px;
+  border: 1px solid #fde68a;
+  border-radius: 12px;
+  background: #fffbeb;
+  color: #b45309;
+}
+
+.settings-note svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.settings-note p {
+  margin: 0;
+  color: #92400e;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+
+  .settings-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .settings-header {
+    padding: 50px 0 40px;
+  }
+
+  .settings-header h1 {
+    font-size: 30px;
+  }
+
+  .settings-section {
+    padding: 40px 0 70px;
+  }
+
+  .settings-card {
+    padding: 22px 18px;
+  }
+
+  .settings-security-item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .settings-security-badge {
+    align-self: flex-start;
+  }
+
+}

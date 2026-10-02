@@ -1,0 +1,421 @@
+/* =================================
+   BOOKING CONFIRMATION PAGE
+================================= */
+
+.booking-confirmation-page {
+  min-height: 70vh;
+  padding: 70px 0 100px;
+  background: #f8fafc;
+}
+
+.booking-confirmation-card {
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  border-radius: 22px;
+  background: white;
+  box-shadow:
+    0 15px 45px rgba(15, 23, 42, 0.08);
+}
+
+
+/* =================================
+   SUCCESS HEADER
+================================= */
+
+.booking-success-header {
+  padding: 45px 30px 40px;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: center;
+}
+
+.booking-success-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 78px;
+  height: 78px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: #ecfdf5;
+  color: #16a34a;
+}
+
+.booking-success-label {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #16a34a;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.booking-success-header h1 {
+  margin-bottom: 10px;
+  color: #172033;
+  font-size: 34px;
+  line-height: 1.2;
+}
+
+.booking-success-header p {
+  max-width: 550px;
+  margin: 0 auto 20px;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.booking-id-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #172033;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+
+/* =================================
+   CONFIRMATION CONTENT
+================================= */
+
+.booking-confirmation-content {
+  padding: 35px;
+}
+
+.booking-section {
+  margin-bottom: 32px;
+}
+
+.booking-section h2 {
+  margin-bottom: 17px;
+  color: #172033;
+  font-size: 18px;
+}
+
+
+/* =================================
+   BOOKING INFO GRID
+================================= */
+
+.booking-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.booking-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 17px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #f8fafc;
+  color: #f59e0b;
+}
+
+.booking-info-item div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.booking-info-item small {
+  color: #94a3b8;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.booking-info-item strong {
+  color: #172033;
+  font-size: 13px;
+}
+
+
+/* =================================
+   PACKAGE BOX
+================================= */
+
+.booking-package-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 22px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background: white;
+}
+
+.booking-package-box span {
+  color: #94a3b8;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.booking-package-box h3 {
+  margin: 5px 0 4px;
+  color: #172033;
+  font-size: 19px;
+}
+
+.booking-package-box p {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.booking-package-price {
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.booking-package-price small {
+  display: block;
+  margin-bottom: 4px;
+  color: #94a3b8;
+  font-size: 10px;
+}
+
+.booking-package-price strong {
+  color: #172033;
+  font-size: 23px;
+}
+
+
+/* =================================
+   CUSTOMER INFORMATION
+================================= */
+
+.booking-customer-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.booking-customer-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 17px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #f8fafc;
+  color: #64748b;
+}
+
+.booking-customer-item div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.booking-customer-item small {
+  color: #94a3b8;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.booking-customer-item strong {
+  overflow: hidden;
+  color: #172033;
+  font-size: 13px;
+  text-overflow: ellipsis;
+}
+
+
+/* =================================
+   BOOKING STATUS
+================================= */
+
+.booking-status-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 10px;
+  padding: 17px 0;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.booking-status-row span {
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.booking-status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 11px;
+  border-radius: 20px;
+  background: #fff7ed;
+  color: #c2410c;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+
+/* =================================
+   ACTIONS
+================================= */
+
+.booking-confirmation-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.booking-download-button,
+.booking-packages-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 0 20px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.booking-download-button {
+  flex: 1;
+  border: none;
+  background: #172033;
+  color: white;
+}
+
+.booking-download-button:hover {
+  background: #f59e0b;
+  transform: translateY(-1px);
+  box-shadow:
+    0 8px 20px rgba(245, 158, 11, 0.22);
+}
+
+.booking-packages-button {
+  border: 1px solid #cbd5e1;
+  background: white;
+  color: #475569;
+}
+
+.booking-packages-button:hover {
+  border-color: #94a3b8;
+  background: #f1f5f9;
+  color: #172033;
+}
+
+
+/* =================================
+   MISSING BOOKING
+================================= */
+
+.booking-missing {
+  max-width: 600px;
+  margin: 70px auto;
+  padding: 50px 30px;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  background: white;
+  text-align: center;
+  box-shadow:
+    0 12px 35px rgba(15, 23, 42, 0.06);
+}
+
+.booking-missing h1 {
+  margin-bottom: 10px;
+  color: #172033;
+  font-size: 28px;
+}
+
+.booking-missing p {
+  margin-bottom: 22px;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.booking-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #172033;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.booking-back-link:hover {
+  color: #f59e0b;
+}
+
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 700px) {
+
+  .booking-confirmation-page {
+    padding: 45px 0 70px;
+  }
+
+  .booking-success-header {
+    padding: 35px 22px;
+  }
+
+  .booking-success-header h1 {
+    font-size: 28px;
+  }
+
+  .booking-confirmation-content {
+    padding: 25px 20px;
+  }
+
+  .booking-info-grid,
+  .booking-customer-box {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-package-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .booking-package-price {
+    text-align: left;
+  }
+
+  .booking-confirmation-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .booking-download-button,
+  .booking-packages-button {
+    width: 100%;
+  }
+}
