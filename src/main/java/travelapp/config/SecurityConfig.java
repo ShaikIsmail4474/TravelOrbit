@@ -1,6 +1,5 @@
 package travelapp.config;
 
-
 import java.util.List;
 
 import org.springframework.context.annotation.Bean;
@@ -35,34 +34,25 @@ public class SecurityConfig {
     ) throws Exception {
 
         http
-                // Disable CSRF for REST APIs
                 .csrf(csrf -> csrf.disable())
 
-                // Enable CORS
                 .cors(cors -> {})
 
-                // Authorization rules
                 .authorizeHttpRequests(auth -> auth
 
-                        // =========================
-                        // PUBLIC AUTHENTICATION APIs
-                        // =========================
+                        // Public authentication APIs
                         .requestMatchers(
                                 "/api/auth/**"
                         ).permitAll()
 
-                        // =========================
-                        // PUBLIC PACKAGE VIEW APIs
-                        // =========================
+                        // Public package view APIs
                         .requestMatchers(
                                 HttpMethod.GET,
                                 "/api/packages",
                                 "/api/packages/**"
                         ).permitAll()
 
-                        // =========================
-                        // ADMIN PACKAGE APIs
-                        // =========================
+                        // Admin package APIs
                         .requestMatchers(
                                 HttpMethod.POST,
                                 "/api/packages"
@@ -78,20 +68,15 @@ public class SecurityConfig {
                                 "/api/packages/**"
                         ).hasRole("ADMIN")
 
-                        // =========================
-                        // USER APIs
-                        // =========================
+                        // User APIs
                         .requestMatchers(
                                 "/api/users/**"
                         ).authenticated()
 
-                        // =========================
-                        // EVERYTHING ELSE
-                        // =========================
+                        // Everything else
                         .anyRequest().authenticated()
                 )
 
-                // JWT filter
                 .addFilterBefore(
                         jwtAuthenticationFilter,
                         UsernamePasswordAuthenticationFilter.class
@@ -108,7 +93,8 @@ public class SecurityConfig {
 
         configuration.setAllowedOrigins(
                 List.of(
-                        "http://localhost:5173"
+                        "http://localhost:5173",
+                        "https://travel-orbit-ten.vercel.app"
                 )
         );
 
