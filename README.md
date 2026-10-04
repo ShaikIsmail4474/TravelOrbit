@@ -1,6 +1,6 @@
-# ✈️ TravelOrbit — Travel & Tourism Management System
+# ✈️ TravelOrbit — Travel & Tourism Portal
 
-TravelOrbit is a full-stack Travel & Tourism Management System designed to provide a complete platform for customers to explore travel packages, make bookings, manage payments, and download booking confirmations.
+TravelOrbit is a full-stack Travel & Tourism Portal designed to provide a complete platform for customers to explore travel packages, make bookings, manage payments, and download booking confirmations.
 
 The system also provides an Admin Dashboard for managing travel packages, users, bookings, payments, and other platform operations.
 
