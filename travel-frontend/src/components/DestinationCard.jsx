@@ -1,8 +1,37 @@
 import { ArrowUpRight, MapPin } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
 
 function DestinationCard({ destination }) {
+
+  const navigate = useNavigate()
+
+  const handleDestinationClick = () => {
+    navigate('/')
+
+    setTimeout(() => {
+      const packagesSection = document.getElementById('packages')
+
+      if (packagesSection) {
+        packagesSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        })
+      }
+    }, 100)
+  }
+
   return (
-    <article className="destination-card">
+    <article
+      className="destination-card"
+      onClick={handleDestinationClick}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          handleDestinationClick()
+        }
+      }}
+    >
 
       <img
         src={destination.image}
@@ -28,6 +57,10 @@ function DestinationCard({ destination }) {
           <button
             className="destination-arrow"
             aria-label={`Explore ${destination.name}`}
+            onClick={(event) => {
+              event.stopPropagation()
+              handleDestinationClick()
+            }}
           >
             <ArrowUpRight size={19} />
           </button>

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -16,6 +17,10 @@ function Packages() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
 
+  const [searchParams] = useSearchParams()
+
+  const selectedLocation = searchParams.get('location')
+
   useEffect(() => {
 
     const loadPackages = async () => {
@@ -31,7 +36,7 @@ function Packages() {
 
       } catch (err) {
 
-        console.error('Failed to load packages:', err)
+        console.error('Failed to load travel packages:', err)
 
         setError(
           'Unable to load travel packages. Please try again later.'
@@ -49,6 +54,13 @@ function Packages() {
 
   }, [])
 
+  const filteredPackages = selectedLocation
+    ? packages.filter((packageData) =>
+        packageData.location?.toLowerCase() ===
+        selectedLocation.toLowerCase()
+      )
+    : packages
+
   return (
     <>
       <Navbar />
@@ -59,16 +71,21 @@ function Packages() {
           <div className="container">
 
             <span className="section-eyebrow">
-              Explore our collection
+              {selectedLocation
+                ? `Packages in ${selectedLocation}`
+                : 'Explore our collection'}
             </span>
 
             <h1>
-              Travel Packages
+              {selectedLocation
+                ? `${selectedLocation} Travel Packages`
+                : 'Travel Packages'}
             </h1>
 
             <p>
-              Discover carefully selected travel experiences
-              and find the perfect package for your next journey.
+              {selectedLocation
+                ? `Discover travel experiences available in ${selectedLocation}.`
+                : 'Discover carefully selected travel experiences and find the perfect package for your next journey.'}
             </p>
 
           </div>
@@ -89,16 +106,20 @@ function Packages() {
             )}
 
 
-            {!loading && !error && packages.length === 0 && (
+            {!loading && !error && filteredPackages.length === 0 && (
 
               <div className="empty-state">
 
                 <h3>
-                  No travel packages available
+                  {selectedLocation
+                    ? `No packages available in ${selectedLocation}`
+                    : 'No travel packages available'}
                 </h3>
 
                 <p>
-                  Please check back later for available packages.
+                  {selectedLocation
+                    ? 'Please check back later for packages in this destination.'
+                    : 'Please check back later for available travel packages.'}
                 </p>
 
               </div>
@@ -106,11 +127,11 @@ function Packages() {
             )}
 
 
-            {!loading && !error && packages.length > 0 && (
+            {!loading && !error && filteredPackages.length > 0 && (
 
               <div className="package-grid">
 
-                {packages.map((packageData) => (
+                {filteredPackages.map((packageData) => (
 
                   <PackageCard
                     key={packageData.id}
